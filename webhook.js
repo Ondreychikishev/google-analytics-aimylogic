@@ -14,7 +14,7 @@ module.exports = (webhook) => {
     .on('tariff', (session) => { //название события
         /**
         https://developers.google.com/analytics/devguides/collection/protocol/v1?hl=ru
-        tid:'UA-145269857-5', -  уникальный идентификатор отслеживания
+        tid:'UA-**********-*', -  уникальный идентификатор отслеживания
         cid: session.userId, -  уникальный id пользователя, используем нашу системную переменную $userId
         t: 'event', - тип обращения. Возможные варианты: pageview, screenview, event, transaction, item, social, exception, timing
         ec: 'bot', - категория события, называете вы, может быть любой на ваше усмотрение
