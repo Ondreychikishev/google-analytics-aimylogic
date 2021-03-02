@@ -12,14 +12,14 @@ const request = require('sync-request');
 module.exports = (webhook) => {
     webhook
     .on('tariff', (session) => { //название события
-        request('POST', 'https://www.google-analytics.com/collect?v=1', {
-            form: {
-                tid:'UA-*********-*', // уникальный идентификатор отслеживания
-                cid: session.userId, // уникальный id пользователя, используем нашу системную переменную $userId
-                t: 'event', // тип обращения. Возможные варианты: pageview, screenview, event, transaction, item, social, exception, timing
-                ec: 'bot', // категория события, называете вы, может быть любой на ваше усмотрение
-                ea: 'tariff' // действие события, называете также вы
-            }
-        });
+        /**
+        https://developers.google.com/analytics/devguides/collection/protocol/v1?hl=ru
+        tid:'UA-145269857-5', -  уникальный идентификатор отслеживания
+        cid: session.userId, -  уникальный id пользователя, используем нашу системную переменную $userId
+        t: 'event', - тип обращения. Возможные варианты: pageview, screenview, event, transaction, item, social, exception, timing
+        ec: 'bot', - категория события, называете вы, может быть любой на ваше усмотрение
+        ea: 'tariff' - действие события, называете также вы
+        */
+        request('POST', 'https://www.google-analytics.com/collect?v=1&tid=UA-*********-*&cid=12345678&t=event&ec=bot&ea=tariff');
     });
 };
