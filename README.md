@@ -13,7 +13,7 @@ heroku login
 heroku git:clone -a <your Heroku application name>
 cd <your Heroku application name>
 git remote add origin https://github.com/Ondreychikishev/google-analytics-aimylogic
-git pull origin master
+git pull origin main
 ```
   
 Когда вы будете готовы выложить свои изменения в Heroku, введите:
