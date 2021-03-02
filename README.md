@@ -12,7 +12,7 @@ example integrations google-analytics
 heroku login
 heroku git:clone -a <your Heroku application name>
 cd <your Heroku application name>
-git remote add origin https://github.com/Ondreychikishev/send-message
+git remote add origin https://github.com/Ondreychikishev/google-analytics-aimylogic
 git pull origin master
 ```
   
