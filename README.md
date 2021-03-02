@@ -37,7 +37,7 @@ webhook
     .on('tariff', (session) => { //название события
         request('POST', 'https://www.google-analytics.com/collect?v=1', {
             form: {
-                tid:'UA-145269857-5', // уникальный идентификатор отслеживания
+                tid:'UA-*********-*', // уникальный идентификатор отслеживания
                 cid: session.userId, // уникальный id пользователя, используем системную переменную из Aimylogic $userId
                 t: 'event', // тип обращения. Возможные варианты: pageview, screenview, event, transaction, item, social, exception, timing
                 ec: 'bot', // категория события, называете вы, может быть любой на ваше усмотрение
